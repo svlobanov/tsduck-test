@@ -3,6 +3,7 @@
 
 source $(dirname $0)/../common/testrc.sh
 test_cleanup "$SCRIPT.*"
+exclude_on_asan
 
 # Run the test only if srt is supported on this platform
 if $(tspath tsversion) --support srt; then
